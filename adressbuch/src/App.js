@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-const url = "https://randomuser.me/api/?results=20"; //API
+const url = "https://randomuser.me/api/?results=100"; //API
 
 class App extends Component {
   constructor(props) { // Constructor for state variables
@@ -38,10 +38,10 @@ class App extends Component {
 
 onClick = (event) => {
   let pressedName = event.target.innerText; // get pressed Name
-  pressedName = pressedName.split(' ') // split string into characters
+  let pressedNameSplit = pressedName.split(' ') // split string into characters
   let pressedItem = [];
-  for ( let ii = 0; ii < pressedName.length; ii++) {
-    pressedItem[ii] = pressedName[ii].trim() //remove all blank spaces
+  for ( let ii = 0; ii < pressedNameSplit.length; ii++) {
+    pressedItem[ii] = pressedNameSplit[ii].trim() //remove all blank spaces
   }
   pressedItem = pressedItem.join('') //join characters to string
   let items = this.state.items; //get API data
