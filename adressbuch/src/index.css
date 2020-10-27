@@ -25,3 +25,24 @@ button {
 button:hover {
   background: #ddd;
 }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+p {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+h4 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
