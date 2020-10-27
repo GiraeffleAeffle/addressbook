@@ -9,6 +9,10 @@ class App extends Component {
       error: null,
       isLoaded: false,
       items: [], // Save API Data
+      clicked: false,
+      name: "",
+      foto: "",
+      email: ""
     };
   }
 
@@ -31,6 +35,40 @@ class App extends Component {
       }
     )
 }
+
+onClick = (event) => {
+  let pressedName = event.target.innerText; // get pressed Name
+  pressedName = pressedName.split(' ') // split string into characters
+  let pressedItem = [];
+  for ( let ii = 0; ii < pressedName.length; ii++) {
+    pressedItem[ii] = pressedName[ii].trim() //remove all blank spaces
+  }
+  pressedItem = pressedItem.join('') //join characters to string
+  let items = this.state.items; //get API data
+  let joinedHelpArr = []; // create help Array to display names of API with clicked name
+  for (let jj = 0; jj < items.length; jj++) {
+    joinedHelpArr[jj] = (items[jj].name.title + items[jj].name.first + (items[jj].name.last).split(' ').join(''));
+  }
+  let kk =  joinedHelpArr.indexOf(pressedItem);
+  if (kk >= 0) {
+    this.setState({
+      clicked: true,
+      name: pressedName,
+      foto: items[kk].picture.large,
+      email: items[kk].email
+    });
+  }
+}
+
+getBack = (event) => {
+    event.preventDefault()
+    this.setState({
+      clicked: false,
+      name: "",
+      foto: "",
+      email: ""
+    });
+  }
 
   render() {
     const { error, isLoaded, items, clicked } = this.state;
