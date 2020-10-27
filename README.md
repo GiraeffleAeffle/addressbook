@@ -10,6 +10,10 @@ It is an address book that loads names from the https://randomuser.me/api of x u
 
 In the project directory, you can run:
 
+### `npm install`
+
+Run to install dependencies like reactjs.
+
 ### `yarn start`
 
 Runs the app in the development mode.\
