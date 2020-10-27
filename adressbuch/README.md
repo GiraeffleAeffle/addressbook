@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Description
+
+It is an address book that loads names from the https://randomuser.me/api of x users in a list. You can click on the names and open a detailed view of the person which consists of a card that shows a picture, the name and the email-address of the person. You can get back to the list of names if you press the "back" button.
+
 ## Available Scripts
 
 In the project directory, you can run:
