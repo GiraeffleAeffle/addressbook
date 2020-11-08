@@ -103,15 +103,13 @@ getBack = (event) => { // go back to list
               <div>
                 <div className="App-header">
                   <a href="https://github.com/GiraeffleAeffle/addressbook/tree/master"> address book</a>
-                  <div className="header-right">
-                  </div>
                 </div>
                 <div className="card">
                   <img src={this.state.foto} alt={this.state.name}/>
                    <div className="container">
                     <h4><b>{this.state.name} &nbsp;</b></h4>
                     <p>{this.state.email}</p>
-                     </div>
+                    </div>
                     <button onClick={this.getBack}>Back</button>
                 </div>
               </div>
