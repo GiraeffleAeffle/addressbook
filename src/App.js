@@ -86,7 +86,7 @@ getBack = (event) => { // go back to list
               <div className="App-header">
                 <a href="https://github.com/GiraeffleAeffle/addressbook/tree/master"> address book</a>
               </div>
-              <ul>
+              <ul id="list">
               {items.map(item => (
                 <li key={item.email}>
                   <button value={this.state.items} onClick={this.onClick}>

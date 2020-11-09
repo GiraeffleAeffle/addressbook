@@ -3,8 +3,12 @@
 }
 
 .App-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #F5F5F5;
-  overflow: hidden;
+  z-index: 9999;
 }
 
 .App-header a {
@@ -41,4 +45,8 @@
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
+}
+
+#list {
+  margin: 75px auto;
 }
